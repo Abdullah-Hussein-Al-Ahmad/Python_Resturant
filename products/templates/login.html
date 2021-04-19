@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+      .login {
+        font-size: 20px;
+      }
+      .form-control {
+        width: 18cm;
+        height: 20px;
+        box-shadow: inset;
+        box-decoration-break: clone;
+        margin-top: 8px;
+      }
+      .sr-only {
+        margin-top: 1cm;
+      }
+      /* .button{
+		  width: 3cm;
+		  height: 2cm;
+		  border-radius: 2cm;
+		  /* border: solid black 5px;
+		  background-color: rgb(184, 107, 107);
+	  } */
+    </style>
+  </head>
+  <body>
+    <form class="form signing-in" method="POST">
+      {% csrf_token %}
+      <h1
+        style="
+          background-color: rgb(120, 148, 209);
+          color: #fff;
+          background-size: 1cm;
+          margin-top: 5cm;
+        "
+      >
+        <center>Please Enter Your Account</center>
+      </h1>
+      <div class="login">
+        <center>
+          <label for="inputUsername" class="sr-only"> User Name </label>
+          <input
+            type="text"
+            id="inputUsername"
+            class="form-control"
+            placeholder="User Name"
+            name="username"
+            required
+            autofocus
+          />
+          <br />
+
+          <label for="inputPassword1" class="sr-only"> Password </label>
+          <input
+            type="password"
+            id="inputPassword1"
+            class="form-control"
+            placeholder="Password"
+            name="password1"
+            required
+            autofocus
+          />
+        </center>
+        <br />
+        <center>
+          <button
+            style="
+              width: 4cm;
+              height: 2cm;
+              color: #fff;
+              border-radius: 2cm;
+              background-color: rgb(145, 64, 64);
+              margin-bottom: 4cm;
+            "
+          >
+            Login
+          </button>
+        </center>
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% block content %}
+<html lang="en">
+    <head>
+        <title>Choose The Lunch</title>
+    </head>
+    <body>
+        
+        <h1>Products</h1>
+
+
+        <div class="container">
+            <div class="row">
+                {% for product in products %}
+                    <div class="col" style="background-color: rgb(41, 44, 43);">
+                        <div class="card" style="width: 18rem;margin-bottom: 1cm;">
+                            <img class="card-img-top" src="{{ product.image_link }}" alt="Card image cap" width="400" height="250">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ product.name }}</h5>
+                                <p class="card-text">${{ product.price }}</p>
+                                <p class="card-text"></p>
+                                <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Add To Cart</a>
+                            </div>
+                            <!-- Optional JavaScript; choose one of the two! -->
+                        
+                            <!-- Option 1: Bootstrap Bundle with Popper -->
+                            <script
+                            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+                            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+                            crossorigin="anonymous"
+                            ></script>
+                        </div> 
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </body>
+
+</html>
+{% endblock %}

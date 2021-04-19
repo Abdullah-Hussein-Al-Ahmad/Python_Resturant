@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <section class="#section1" style="scroll-behavior: smooth;">
+        <nav>
+            <a href="#section1"><button style="padding-top: 0%;">Do You Want To Eat SomeThing</button></a>
+        </nav>
+       
+        <h1>Products</h1>
+
+
+
+        <div class="row">
+            {% for product in products %}
+            <div class="col">
+                <div class="card" style="width: 18rem;margin-bottom: 1cm;">
+                    <img class="card-img-top" src="{{ product.image_link }}" alt="Card image cap" width="400" height="250">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product.name }}</h5>
+                        <p class="card-text">${{ product.price }}</p>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Add To Cart</a>
+                    </div>
+                </div> 
+            </div>
+            {% endfor %}
+        </div>
+        <center><a href="http://127.0.0.1:8000/" style="margin-right: 0px;"><button style="width: 4cm;height: 2cm;color: #fff;border-radius: 2cm;;background-color: rgb(145, 64, 64);margin-bottom: 4cm;">Home</button></a></center>
+    </section>
+{% endblock %}
